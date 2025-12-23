@@ -43,7 +43,7 @@ const userSocketMap = {}; // {userId: socketId}
 /**
  * Lấy tất cả socketId của 1 user
  */
-export function getReceiverSocketIds(userId) {
+export function getReceiverSocketId(userId) {
   return userSocketMap[userId] || [];
 }
 

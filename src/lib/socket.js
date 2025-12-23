@@ -13,7 +13,9 @@ const io = new Server(server, {
     origin: process.env.NODE_ENV === "production"
       ? [process.env.URL_FRONTEND]
       : ["http://127.0.0.1:5173", "http://localhost:5173"],
+    credentials: true,
   },
+  transports: ["websocket", "polling"],
 });
 
 const userSocketMap = {}; // {userId: socketId}
